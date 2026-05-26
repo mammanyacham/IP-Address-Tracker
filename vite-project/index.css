@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-section{
+    background-image: url('/images/pattern-bg-desktop.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+h1{
+    margin: 0px;
+    color: white;
+}
+
+.search-input{
+    padding: 1em;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    border: none;
+    min-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    
+}
+
+.search-btn{
+    background-color: black;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
