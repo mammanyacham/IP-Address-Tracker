@@ -3,6 +3,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container{
+    
+}
 
 .search-section{
     background-image: url('/images/pattern-bg-desktop.png');
@@ -10,12 +13,22 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 2em 30px 6em 30px;
+    position: relative;
 }
 
 h1{
     margin: 0px;
     color: white;
+}
+
+form{
+    display: flex;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
 }
 
 .search-input{
@@ -28,15 +41,6 @@ h1{
     cursor: pointer;
 }
 
-form{
-    display: flex;
-    border: none;
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px;
-}
-
 .search-btn{
     background-color: black;
     border: none;
@@ -44,21 +48,41 @@ form{
     cursor: pointer;
 }
 
-.ip-data-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  
-}
-
-.ip-data-display{
-    background-color: brown;
+.ip-dashboard-container{
     display: flex;
     justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    gap: 2em;
-    width: 80%;
-    max-width: 800px;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    position: absolute;
+    top: 150px;
 }
+
+.ip-data-dashboard{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.ip-data-dashboard > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description{
+    color: hsl(0, 0%, 58%);
+    font-weight: 800;
+    font-size: 0.7em;
+    margin: 0px;
+}
+

@@ -9,7 +9,8 @@ import '/index.css';
 export default function App() {
 
     const [formData, setFormData] = useState('');
-    const [ipAddress, setIpAddress] = useState('')
+    const [ipAddress, setIpAddress] = useState('');
+    const [ipData, setIpData] = useState({});
     
     function getFormData(e) {
         const value = e.target.value
@@ -30,6 +31,8 @@ export default function App() {
 
                     const data = await response.json();
 
+                    setIpData(data);
+
                      console.log(data)
                 } catch(error) {
                     console.error('error loading data:', error)
@@ -48,7 +51,10 @@ export default function App() {
                 handleSubmit={handleSubmit}
                 formData={formData}
             />
-            <DisplayIpData />       
+            
+            <DisplayIpData 
+                ipData={ipData}
+            />       
         </div>
     )
 }
