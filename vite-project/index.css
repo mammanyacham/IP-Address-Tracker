@@ -64,8 +64,9 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     width: 100%;
+    min-height: 300px;
     box-sizing: border-box;
     margin: 0px 30px;
     border-radius: 10px;
@@ -83,6 +84,13 @@ form{
     color: hsl(0, 0%, 58%);
     font-weight: 800;
     font-size: 0.7em;
+    margin: 0px;
+}
+
+.value{
+    color: black;
+    font-weight: 800;
+    font-size: 1.2em;
     margin: 0px;
 }
 

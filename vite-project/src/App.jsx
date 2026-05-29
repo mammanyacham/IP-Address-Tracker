@@ -10,7 +10,7 @@ export default function App() {
 
     const [formData, setFormData] = useState('');
     const [ipAddress, setIpAddress] = useState('');
-    const [ipData, setIpData] = useState({});
+    const [ipData, setIpData] = useState(null);
     
     function getFormData(e) {
         const value = e.target.value

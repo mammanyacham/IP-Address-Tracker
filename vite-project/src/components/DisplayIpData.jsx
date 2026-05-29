@@ -1,27 +1,35 @@
 export default function DisplayIpData({ ipData }) {
 
+    const ipDataArray = [
+        {
+            title: 'IP ADDRESS',
+            value: ipData?.ip
+        },
+         {
+            title: 'LOCATION',
+            value: `${ipData?.location?.region}, ${ipData?.location?.country}`
+        },
+         {
+            title: 'TIMEZONE',
+            value: ipData?.location?.timezone
+        },
+         {
+            title: 'ISP',
+            value: ipData?.isp
+        }
+     ];
+
+     const ipDataElements = ipDataArray.map((item, index) => (
+        <div key={index}>
+            <p className="description">{item.title}</p>
+            <p className="value">{!ipData ? 'Loading...' : item.value}</p>
+        </div>
+     )) 
+
     return(
-            <div className="ip-dashboard-container">
-                <section className="ip-data-dashboard">
-                    <div>
-                        <p className="description">IP ADDRESS</p>
-                        <p>{ipData.ip}</p>
-                    </div>
-
-                <div>
-                    <p className="description">LOCATION</p>
-                    <p>{ipData.location.region}, {ipData.location.country}</p>
-                </div>
-
-                <div>
-                    <p className="description">TIMEZONE</p>
-                    <p>{ipData.location.timezone}</p>
-                </div>
-
-                <div>
-                    <p className="description">ISP</p>
-                    <p>{ipData.isp}</p>
-                </div>
+        <div className="ip-dashboard-container">
+            <section className="ip-data-dashboard">
+                {ipDataElements}
             </section>
         </div>
     )
