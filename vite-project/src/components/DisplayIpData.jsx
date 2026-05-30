@@ -7,7 +7,7 @@ export default function DisplayIpData({ ipData }) {
         },
          {
             title: 'LOCATION',
-            value: `${ipData?.location?.region}, ${ipData?.location?.country}`
+            value: `${ipData?.location?.city}, ${ipData?.location?.country}`
         },
          {
             title: 'TIMEZONE',
