@@ -1,10 +1,19 @@
 import{ MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 
-export default function Map() {
+export default function Map({ ipData }) {
+
+    const lat = ipData?.location?.lat;
+    const lng = ipData?.location?.lng;
+
+
+    if(!lat || !lng) return <p>Loading...</p>
+
+    console.log(lat, lng)
+
     return (
     <div className='map'>
         <MapContainer 
-            center={[51.505, -0.09]}
+            center={[lat, lng]}
             zoom={13}
             style={{ height: '100%', width: '100%' }}
         >
@@ -14,7 +23,7 @@ export default function Map() {
                 url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
 
-            <Marker position={[51.505, -0.09]}>
+            <Marker position={[lat, lng]}>
                 <Popup>You are here!</Popup>
             </Marker>
         </MapContainer>

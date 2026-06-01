@@ -61,7 +61,9 @@ export default function App() {
                 ipData={ipData}
             />       
 
-            <Map />
+            <Map 
+                ipData={ipData}
+            />
         </div>
     )
 }

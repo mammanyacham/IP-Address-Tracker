@@ -11,7 +11,7 @@ export default function DisplayIpData({ ipData }) {
         },
          {
             title: 'TIMEZONE',
-            value: ipData?.location?.timezone
+            value: `GMT ${ipData?.location?.timezone}`
         },
          {
             title: 'ISP',

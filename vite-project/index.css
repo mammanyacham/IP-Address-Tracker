@@ -66,6 +66,7 @@ form{
     flex-direction: column;
     gap: 2em;
     width: 100%;
+    z-index: 1000;
     min-height: 300px;
     box-sizing: border-box;
     margin: 0px 30px;
@@ -91,10 +92,11 @@ form{
     color: black;
     font-weight: 800;
     font-size: 1.2em;
+    text-align: center;
     margin: 0px;
 }
 
 .map{
-    height: 400px;
+    height: 100vh;
     width: 100%;
 }
