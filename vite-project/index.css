@@ -26,6 +26,7 @@ form{
     display: flex;
     border: none;
     width: 100%;
+    max-width: 500px;
     border-radius: 10px;
     overflow: hidden;
     margin: 20px;
@@ -84,7 +85,7 @@ form{
 .description{
     color: hsl(0, 0%, 58%);
     font-weight: 800;
-    font-size: 0.7em;
+    font-size: 1em;
     margin: 0px;
 }
 
@@ -99,4 +100,39 @@ form{
 .map{
     height: 100vh;
     width: 100%;
+}
+
+.map-loading{
+    font-size: 1.5em;
+    align-self: center;
+    justify-self: center;
+    margin: 100px;
+    font-weight: 700;
+}
+
+@media(min-width: 550px) {
+
+    .ip-dashboard-container{
+        top: 180px;    
+    }
+
+    .ip-data-dashboard{
+        flex-direction: row;
+        justify-content: space-evenly;
+        min-height: 130px;
+        gap: 0px;
+    }
+
+    .ip-data-dashboard > div{
+        display: flex;
+        flex-direction: column;
+        max-width: 180px;
+        height: 80px;
+        padding: 0px 20px;
+        box-sizing: border-box;
+        font-size: 1em;
+        margin: 0px;
+        border-right: 2px solid hsla(0, 0%, 58%, 0.3);
+        margin: 0px;
+    }
 }

@@ -6,7 +6,7 @@ export default function Map({ ipData }) {
     const lng = ipData?.location?.lng;
 
 
-    if(!lat || !lng) return <p>Loading...</p>
+    if(!lat || !lng) return <p className='map-loading'>Map Loading...</p>
 
     console.log(lat, lng)
 

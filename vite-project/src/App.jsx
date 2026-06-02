@@ -31,6 +31,10 @@ export default function App() {
                 try{
                     const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_4cDTNTnQlxao4ho8mxw8nthEZtExp&ipAddress=${ipAddress}`);
 
+                    if(!response.ok) {
+                        throw new Error('Failed to load Data')
+                    }
+
                     const data = await response.json();
 
                     setIpData(data);
@@ -40,7 +44,8 @@ export default function App() {
                      
 
                 } catch(error) {
-                    console.error('error loading data:', error)
+                    console.error('error loading data:', error);
+                    alert(error.message);
                 }
 
                
