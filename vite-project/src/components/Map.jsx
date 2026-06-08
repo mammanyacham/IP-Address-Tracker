@@ -3,7 +3,7 @@ import L from "leaflet";
 
 const icon = L.icon({
   iconUrl: "/images/icon-location.svg",
-  iconSize: [46, 56],
+  iconSize: [40, 50],
   iconAnchor: [23, 56],
 });
 
@@ -31,7 +31,7 @@ export default function Map({ ipData }) {
             />
 
             <Marker position={[lat, lng]} icon={icon}>
-                <Popup>You are here!</Popup>
+                <Popup>{ipData?.location?.city}, {ipData?.location?.region}</Popup>
             </Marker>
         </MapContainer>
     </div>
