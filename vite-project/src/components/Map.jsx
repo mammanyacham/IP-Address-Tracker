@@ -3,8 +3,8 @@ import L from "leaflet";
 
 const icon = L.icon({
   iconUrl: "/images/icon-location.svg",
-  iconSize: [40, 50],
-  iconAnchor: [23, 56],
+  iconSize: [36, 46],
+  iconAnchor: [20, 46],
 });
 
 export default function Map({ ipData }) {
