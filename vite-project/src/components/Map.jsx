@@ -1,4 +1,11 @@
 import{ MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
+import L from "leaflet";
+
+const icon = L.icon({
+  iconUrl: "/images/icon-location.svg",
+  iconSize: [46, 56],
+  iconAnchor: [23, 56],
+});
 
 export default function Map({ ipData }) {
 
@@ -23,7 +30,7 @@ export default function Map({ ipData }) {
                 url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
 
-            <Marker position={[lat, lng]}>
+            <Marker position={[lat, lng]} icon={icon}>
                 <Popup>You are here!</Popup>
             </Marker>
         </MapContainer>
